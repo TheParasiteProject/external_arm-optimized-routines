@@ -26,6 +26,9 @@ cc_defaults {
         "-fno-math-errno",
         "-O3",
 
+        // Make symbols weak-for-native-bridge when compiled with native_bridge_support
+        "--include=native_bridge_support/weak_for_native_bridge.h",
+
         // bionic configuration.
 
         // We're actually implementing bionic here, so we don't want <math.h>
